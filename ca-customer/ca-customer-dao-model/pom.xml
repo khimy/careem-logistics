@@ -4,15 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sa-notification-dao-model</artifactId>
-    <name>SA notification Dao</name>
-    <description>SA notification Data Model and Repositories (JPA)</description>
+    <artifactId>ca-customer-dao-model</artifactId>
+    <name>CA Customer Dao</name>
+    <description>Careem Customer Data Model and Repositories (JPA)</description>
 
     <parent>
-        <groupId>org.swarajabhiyan.donation</groupId>
-        <artifactId>sa-notification-parent</artifactId>
+        <groupId>com.careem.customer</groupId>
+        <artifactId>ca-customer-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
+
 
 
     <properties>

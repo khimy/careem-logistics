@@ -4,17 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sa-notification-api</artifactId>
+    <artifactId>ca-customer-api</artifactId>
 
-    <name>SA Donation API Module</name>
+    <name>Customer Set up Application</name>
     <description>Provides the model used for api</description>
 
     <parent>
-        <groupId>org.swarajabhiyan.donation</groupId>
-        <artifactId>sa-notification-parent</artifactId>
+        <groupId>com.careem.customer</groupId>
+        <artifactId>ca-customer-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-
     <properties>
     </properties>
 

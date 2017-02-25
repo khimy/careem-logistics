@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ca-customer-api/ca-customer-api.iml" filepath="$PROJECT_DIR$/ca-customer-api/ca-customer-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ca-customer-app/ca-customer-app.iml" filepath="$PROJECT_DIR$/ca-customer-app/ca-customer-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ca-customer-dao-model/ca-customer-dao-model.iml" filepath="$PROJECT_DIR$/ca-customer-dao-model/ca-customer-dao-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sa-notification-parent.iml" filepath="$PROJECT_DIR$/sa-notification-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ca-customer-test/sa-notification-test.iml" filepath="$PROJECT_DIR$/ca-customer-test/sa-notification-test.iml" />
+    </modules>
+  </component>
+</project>
