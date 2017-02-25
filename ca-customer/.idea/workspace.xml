@@ -2,114 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c735c66-954a-409f-9768-a1f84a234f63" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ca-customer-api/src/main/java/ca/customer/api/Customer.java" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-api\sa-notification-api.iml" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-api\src\main\java\ca\customer\api\DonorProfile.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-api\src\main\java\ca\customer\api\Gender.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-api\src\main\java\ca\customer\api\Notification.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-api\src\main\java\ca\customer\api\NotificationMode.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-api\src\main\java\ca\customer\api\NotificationType.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-api\target\MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-api\target\classes\org\sa\notification\api\DonorProfile.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-api\target\classes\org\sa\notification\api\Gender.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-api\target\classes\org\sa\notification\api\Name.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-api\target\classes\org\sa\notification\api\Notification$DonationNotification.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-api\target\classes\org\sa\notification\api\Notification.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-api\target\classes\org\sa\notification\api\NotificationMode.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-api\target\classes\org\sa\notification\api\NotificationType.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-api\target\classes\org\sa\notification\api\Options.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\README.md" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\sa-notification-app.iml" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\src\main\java\org\sa\notification\SADonationApplication.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\src\main\java\org\sa\notification\configuration\MailConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\src\main\java\org\sa\notification\configuration\TemplateConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\src\main\java\org\sa\notification\controllers\NotificationController.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\src\main\java\org\sa\notification\exception\InvalidNotificationRequest.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\src\main\java\org\sa\notification\services\CallBackService.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\src\main\java\org\sa\notification\services\NotificationService.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\src\main\java\org\sa\notification\services\NotificationValidator.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\src\main\java\org\sa\notification\services\TemplateProcessor.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\src\main\java\org\sa\notification\services\endpoints\EmailEndPoint.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\src\main\java\org\sa\notification\services\endpoints\SMSGatewayEndPoint.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\src\main\java\org\sa\notification\services\template\MessageGenerator.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\src\test\java\org\sa\notification\services\BinaryTree.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\src\test\java\org\sa\notification\services\RegistrationApplicationTests.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\src\test\java\org\sa\notification\services\SMSGatewayEndPointTest.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\src\test\java\org\sa\notification\services\TemplateProcessorTest.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\src\test\java\org\sa\notification\services\Test.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\classes\application-aws.yml" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\classes\application-local.yaml" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\classes\application.properties" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\classes\application.yaml" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\classes\org\sa\notification\SADonationApplication.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\classes\org\sa\notification\configuration\MailConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\classes\org\sa\notification\configuration\TemplateConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\classes\org\sa\notification\controllers\NotificationController.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\classes\org\sa\notification\exception\InvalidNotificationRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\classes\org\sa\notification\services\CallBackService.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\classes\org\sa\notification\services\NotificationService$1.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\classes\org\sa\notification\services\NotificationService.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\classes\org\sa\notification\services\NotificationValidator.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\classes\org\sa\notification\services\TemplateProcessor.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\classes\org\sa\notification\services\endpoints\EmailEndPoint.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\classes\org\sa\notification\services\endpoints\SMSGatewayEndPoint.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\classes\org\sa\notification\services\template\MessageGenerator.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\classes\templates\email.ftl" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\classes\templates\sms.ftl" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\test-classes\application-local.yml" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\test-classes\org\sa\notification\services\BinaryTree.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\test-classes\org\sa\notification\services\Node.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\test-classes\org\sa\notification\services\RegistrationApplicationTests.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\test-classes\org\sa\notification\services\SMSGatewayEndPointTest.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\test-classes\org\sa\notification\services\TemplateProcessorTest.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-app\target\test-classes\org\sa\notification\services\Test.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\src\main\java\org\sa\notification\dao\DaoConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\src\main\java\org\sa\notification\dao\models\AbstractPersistable.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\src\main\java\org\sa\notification\dao\models\Gender.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\src\main\java\org\sa\notification\dao\models\JsonOption.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\src\main\java\org\sa\notification\dao\models\NotificationAction.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\src\main\java\org\sa\notification\dao\models\NotificationMode.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\src\main\java\org\sa\notification\dao\models\NotificationModel.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\src\main\java\org\sa\notification\dao\models\NotificationStatus.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\src\main\java\org\sa\notification\dao\models\NotificationType.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\src\main\java\org\sa\notification\dao\repositories\NotificationRepository.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\src\test\java\org\sa\notification\dao\TestApplication.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\src\test\java\org\sa\notification\dao\repositories\NotificationRepositoryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\src\test\resources\org\sa\notification\dao\repositories\notification-init.xml" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\src\test\resources\org\sa\notification\dao\repositories\notification-save-expect.xml" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\classes\org\sa\notification\dao\DaoConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\classes\org\sa\notification\dao\models\AbstractPersistable.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\classes\org\sa\notification\dao\models\AbstractPersistable_.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\classes\org\sa\notification\dao\models\Gender.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\classes\org\sa\notification\dao\models\JsonOption.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\classes\org\sa\notification\dao\models\NotificationAction.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\classes\org\sa\notification\dao\models\NotificationMode.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\classes\org\sa\notification\dao\models\NotificationModel.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\classes\org\sa\notification\dao\models\NotificationModel_.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\classes\org\sa\notification\dao\models\NotificationStatus.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\classes\org\sa\notification\dao\models\NotificationType.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\classes\org\sa\notification\dao\repositories\NotificationRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\generated-sources\apt\org\sa\notification\dao\models\AbstractPersistable_.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\generated-sources\apt\org\sa\notification\dao\models\NotificationModel_.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\test-classes\application-local.yml" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\test-classes\org\sa\notification\dao\TestApplication.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\test-classes\org\sa\notification\dao\repositories\NotificationRepositoryTest.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\test-classes\org\sa\notification\dao\repositories\notification-init.xml" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-dao-model\target\test-classes\org\sa\notification\dao\repositories\notification-save-expect.xml" afterPath="" />
-      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-test\sa-notification-test.iml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ca-customer-api/pom.xml" afterPath="$PROJECT_DIR$/ca-customer-api/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ca-customer-app/pom.xml" afterPath="$PROJECT_DIR$/ca-customer-app/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ca-customer-test/pom.xml" afterPath="$PROJECT_DIR$/ca-customer-test/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ca-delivery/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ca-delivery/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ca-notification/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ca-notification/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ca-order/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ca-order/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\.idea\workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\ca-customer-test\target\MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="W:\WORKSPACE\GIT\careem\careem-logistics\ca-customer\target\MANIFEST.MF" afterPath="" />
     </list>
     <ignored path="sa-notification-parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -138,10 +33,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CustomerService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CustomerService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ca-customer-app/src/main/java/ca/customer/services/CustomerService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-33.392857" vertical-offset="0" max-vertical-offset="3162">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3162">
               <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -182,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CustomerController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ca-customer-app/src/main/java/ca/customer/controllers/CustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="799">
-              <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.65745854" vertical-offset="0" max-vertical-offset="799">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -342,14 +237,8 @@
           <option name="myItemId" value="" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
-      </PATH>
-      <PATH>
         <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="CA Customer Parent Module" />
+          <option name="myItemId" value="SA Notification Test" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -359,7 +248,7 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="CA Customer Parent Module" />
+          <option name="myItemId" value="SA Notification Test" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
@@ -408,6 +297,30 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="Customer App" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="CA Customer Parent Module" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="CA Customer Parent Module" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
@@ -499,20 +412,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ca-customer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sa-notification-parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ca-customer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1207,26 +1106,40 @@
       <created>1488026457045</created>
       <option name="number" value="Default" />
       <updated>1488026457045</updated>
-      <workItem from="1488026458743" duration="8713000" />
+      <workItem from="1488026458743" duration="8956000" />
     </task>
+    <task id="LOCAL-00001" summary="sdasd">
+      <created>1488035481510</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1488035481510</updated>
+    </task>
+    <task id="LOCAL-00002" summary="sdasd">
+      <created>1488035596389</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1488035596389</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8713000" />
+    <option name="totallyTimeSpent" value="8956000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="2" width="1546" height="828" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="1.0" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6686567" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32974428" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32974428" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985073" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1291,6 +1204,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="sdasd" />
+    <option name="LAST_COMMIT_MESSAGE" value="sdasd" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1514,23 +1429,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ca-customer-app/src/main/java/ca/customer/controllers/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="799">
-          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ca-customer-app/src/main/java/ca/customer/services/CustomerService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-33.392857" vertical-offset="0" max-vertical-offset="3162">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3162">
           <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2006#2016#0" expanded="true" />
             <element signature="e#2954#2965#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ca-customer-app/src/main/java/ca/customer/controllers/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65745854" vertical-offset="0" max-vertical-offset="799">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
