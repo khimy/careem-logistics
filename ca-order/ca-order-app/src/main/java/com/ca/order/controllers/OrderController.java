@@ -12,7 +12,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/customer/{custumerId}/order/")
+@RequestMapping("/customer/{customerId}/order/")
 public class OrderController {
 
     private OrderService orderService;

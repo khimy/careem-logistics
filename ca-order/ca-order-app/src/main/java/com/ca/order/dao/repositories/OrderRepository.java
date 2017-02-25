@@ -1,6 +1,6 @@
 package com.ca.order.dao.repositories;
 
-import com.ca.customer.dao.models.CustomerModel;
+import com.ca.order.dao.models.CustomerModel;
 import com.ca.order.dao.models.OrderModel;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
@@ -16,8 +16,11 @@ import java.util.List;
 @Repository
 public interface OrderRepository extends PagingAndSortingRepository<OrderModel, Long> {
 
-    List<OrderModel> findByCustomer(CustomerModel customerModel);
+    List<OrderModel> findByCustomerModel(CustomerModel customerModel);
 
-    @Query("SELECT p FROM OrderModel p WHERE LOWER(p.customerId) = :customerId")
+    @Query("SELECT p FROM OrderModel p WHERE LOWER(p.customerModel.id) = :customerId")
     public List<OrderModel> findByCustomerId(@Param("customerId") Long customerId);
+
+    @Query("SELECT p FROM CustomerModel p WHERE LOWER(p.id) = :customerId")
+    public List<CustomerModel> findCustomer(@Param("customerId") Long customerId);
 }

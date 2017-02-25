@@ -1,14 +1,20 @@
-package com.ca.customer.dao.models;
+package com.ca.order.dao.models;
+
+import com.ca.customer.dao.models.*;
+import com.ca.customer.dao.models.AddressModel;
+import com.ca.customer.dao.models.Status;
+import com.ca.order.dao.models.CustomerModel;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by Vivek on 19-01-2017.
  */
 @Entity
-@Table(name = CustomerModel.TBL_CUSTOMER)
-public class CustomerModel extends AbstractPersistable {
-    public static final String TBL_CUSTOMER= "TBL_CUSTOMER";
+@Table(name = EntityModel.TBL_ENTITY)
+public class EntityModel extends  AbstractPersistable {
+    public static final String TBL_ENTITY = "TBL_ENTITY";
 
     @Column(name = "FIRST_NAME", nullable = false)
     private String firstName;
@@ -25,31 +31,38 @@ public class CustomerModel extends AbstractPersistable {
     @Column(name = "EMAIL_ID")
     private String email;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ENTITY_ID", nullable = false)
-    private EntityModel entityModel;
+    @Embedded
+    private com.ca.customer.dao.models.AddressModel address;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER )
+    private List<CustomerModel> customerModelList;
+
 
     @Enumerated(EnumType.STRING)
     @Column(name="STATUS")
-    private Status status;
+    private com.ca.customer.dao.models.Status status;
 
     @Enumerated(EnumType.STRING)
     @Column(name="RATING")
     private Rating rating;
 
-
-    @Embedded
-    private AddressModel address;
-
-    public EntityModel getEntityModel() {
-        return entityModel;
+    public com.ca.customer.dao.models.AddressModel getAddress() {
+        return address;
     }
 
-    public void setEntityModel(EntityModel entityModel) {
-        this.entityModel = entityModel;
+    public void setAddress(AddressModel address) {
+        this.address = address;
     }
 
-    public Status getStatus() {
+    public List<CustomerModel> getCustomerModelList() {
+        return customerModelList;
+    }
+
+    public void setCustomerModelList(List<CustomerModel> customerModelList) {
+        this.customerModelList = customerModelList;
+    }
+
+    public com.ca.customer.dao.models.Status getStatus() {
         return status;
     }
 
@@ -64,7 +77,6 @@ public class CustomerModel extends AbstractPersistable {
     public void setRating(Rating rating) {
         this.rating = rating;
     }
-
 
     public String getFirstName() {
         return firstName;
@@ -104,13 +116,5 @@ public class CustomerModel extends AbstractPersistable {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public AddressModel getAddress() {
-        return address;
-    }
-
-    public void setAddress(AddressModel address) {
-        this.address = address;
     }
 }

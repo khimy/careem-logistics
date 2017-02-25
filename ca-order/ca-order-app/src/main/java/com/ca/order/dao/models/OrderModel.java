@@ -1,7 +1,5 @@
 package com.ca.order.dao.models;
 
-import com.ca.customer.dao.models.CustomerModel;
-
 import javax.persistence.*;
 
 /**
@@ -12,7 +10,9 @@ import javax.persistence.*;
 public class OrderModel extends AbstractPersistable {
     public static final String TBL_ORDER = "TBL_ORDER";
 
-    @Column(name="CustomerId")
+    @OneToOne
+    @JoinColumn(name="CUSTOMER_ID", nullable=false)
+    //@Column(name="CUSTOMER_ID")
     private CustomerModel customerModel;
 
     @Column(name="IS_PICK_UP")
@@ -40,10 +40,12 @@ public class OrderModel extends AbstractPersistable {
     @Column(name = "STATUS")
     private Status status;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL,orphanRemoval = true)
+    @JoinColumn(name="PICK_UP_ADDRESS_ID")
     private AddressModel pickUpAddress;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL,orphanRemoval = true)
+    @JoinColumn(name="DROP_ADDRESS_ID")
     private AddressModel dropAddress;
 
     public CustomerModel getCustomerModel() {

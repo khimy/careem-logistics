@@ -29,17 +29,24 @@ public class OrderService {
     @Transactional
     public OrderApi createOrder(Long customerId, OrderApi orderApi) {
         OrderModel orderModel=toOrderModel(orderApi);
+        orderModel.setCustomerModel(orderRepository.findCustomer(customerId).get(0));
         return toOrderApi(orderRepository.save(orderModel));
     }
 
     public OrderApi getOrder(Long orderId) {
         OrderModel orderModel=orderRepository.findOne(orderId);
+        if(orderModel==null){
+            return null;
+        }
         return toOrderApi(orderModel);
     }
 
     public List<OrderApi> getOrderList(Long customerId) {
         List<OrderApi> orderApiList=new ArrayList<>();
         List<OrderModel> orderModels=orderRepository.findByCustomerId(customerId);
+        if(orderModels==null || orderModels.isEmpty()){
+            return null;
+        }
         for(OrderModel orderModel:orderModels){
             OrderApi orderApi=toOrderApi(orderModel);
             orderApiList.add(orderApi);
@@ -85,6 +92,8 @@ public class OrderService {
 
     private OrderApi toOrderApi(OrderModel order) {
         OrderApi orderApi=new OrderApi();
+        orderApi.id=order.getId();
+        orderApi.customerId=order.getCustomerModel().getId();
         orderApi.quotedPrice=order.getQuotedPrice();
         orderApi.status=(toStatus(order.getStatus()));
         orderApi.comments=order.getComments();
