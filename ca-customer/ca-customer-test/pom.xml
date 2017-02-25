@@ -3,16 +3,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sa-notification-test</artifactId>
+    <artifactId>ca-customer-test</artifactId>
 
     <name>SA Notification Test</name>
     <description>SA Notification App (Test)</description>
 
     <parent>
-        <groupId>org.swarajabhiyan.donation</groupId>
-        <artifactId>sa-notification-parent</artifactId>
+        <groupId>com.careem.customer</groupId>
+        <artifactId>ca-customer-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
+
 
     <properties>
         <testng.version>6.9.10</testng.version>
@@ -20,10 +21,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.swarajabhiyan.donation</groupId>
-            <artifactId>sa-notification-api</artifactId>
-        </dependency>
 
         <!-- Logging -->
         <dependency>

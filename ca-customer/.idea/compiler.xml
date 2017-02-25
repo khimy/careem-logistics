@@ -40,6 +40,7 @@
       <module name="ca-customer-app" target="1.8" />
       <module name="ca-customer-dao-model" target="1.8" />
       <module name="sa-notification-parent" target="1.8" />
+      <module name="sa-notification-test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

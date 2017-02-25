@@ -5,8 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>ca-customer-app</artifactId>
-
-    <name>Customer Set Up</name>
+    <name>Customer App</name>
     <description>Customer Set Up App</description>
 
     <parent>
@@ -23,10 +22,12 @@
         <dependency>
             <groupId>com.careem.customer</groupId>
             <artifactId>ca-customer-api</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.careem.customer</groupId>
             <artifactId>ca-customer-dao-model</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
 
