@@ -1,7 +1,9 @@
 package ca.customer.services;
 
+import ca.customer.api.Address;
 import ca.customer.api.Customer;
 import ca.customer.api.EntityApi;
+import ca.customer.dao.models.AddressModel;
 import ca.customer.dao.models.CustomerModel;
 import ca.customer.dao.models.EntityModel;
 import ca.customer.dao.models.Status;
@@ -93,10 +95,6 @@ public class CustomerService {
         return entityApiList;
     }
 
-
-
-
-
     private EntityApi toEntityModel(EntityModel entityModel) {
         EntityApi entityApi =new EntityApi();
         entityModel.setEmail(entityApi.email);
@@ -105,6 +103,7 @@ public class CustomerService {
         entityModel.setFirstName(entityApi.name.first);
         entityModel.setMiddleName(entityApi.name.middle);
         entityModel.setLastName(entityApi.name.last);
+        entityModel.setAddress(toAddressModel(entityApi.address));
         return entityApi;
     }
 
@@ -140,7 +139,16 @@ public class CustomerService {
         customerModel.setFirstName(customer.name.first);
         customerModel.setMiddleName(customer.name.middle);
         customerModel.setLastName(customer.name.last);
+        customerModel.setAddress(toAddressModel(customer.address));
         return customer;
+    }
+
+    private AddressModel toAddressModel(Address address) {
+        AddressModel addressModel=new AddressModel();
+        addressModel.setAddressLine1(address.addressLine1);
+        addressModel.setAddressLine2(address.addressLine2);
+        addressModel.setPostalAddress(address.postalAddress);
+        return addressModel;
     }
 
     private ca.customer.api.Status toStatus(Status status) {

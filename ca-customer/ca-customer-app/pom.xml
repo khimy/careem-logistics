@@ -133,29 +133,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
-            <plugin>
-                <groupId>io.fabric8</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-
-                <configuration>
-                    <images>
-                        <image>
-                            <alias>sa-notification-app</alias>
-                            <name>sa-notification-app:${project.version}</name>
-                            <build>
-                                <from>java:8</from>
-                                <assembly>
-                                    <descriptorRef>artifact</descriptorRef>
-                                </assembly>
-                                <cmd>
-                                    <shell>java -jar maven/sa-notification-app-${project.version}.jar</shell>
-                                </cmd>
-                            </build>
-                        </image>
-                    </images>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 

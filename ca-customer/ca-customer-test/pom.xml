@@ -5,8 +5,8 @@
 
     <artifactId>ca-customer-test</artifactId>
 
-    <name>SA Notification Test</name>
-    <description>SA Notification App (Test)</description>
+    <name>CA Customer Test</name>
+    <description>CA Customer App (Test)</description>
 
     <parent>
         <groupId>com.careem.customer</groupId>
