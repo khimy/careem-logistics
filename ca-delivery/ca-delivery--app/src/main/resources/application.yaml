@@ -1,0 +1,18 @@
+spring:
+  jpa:
+    database: MYSQL
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+#security:
+#  oauth2:
+#    client:
+#      client-id: read-only-client
+#      client-secret:
+#    resource:
+#      id: test
+#      service-id: test
+#      token-info-uri: http://localhost:8080/oauth/check_token
+#      user-info-uri:  http://localhost:8080/oauth/me

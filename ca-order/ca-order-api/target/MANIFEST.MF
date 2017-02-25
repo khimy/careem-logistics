@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: SA Donation API Module
+Implementation-Version: 1.0.0-SNAPSHOT
+Built-By: Vivek
+Implementation-Vendor-Id: org.swarajabhiyan.donation
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8.0_111
+Main-Class: ${start-class}
+

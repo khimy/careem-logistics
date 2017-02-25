@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>sa-notification-test</artifactId>
+
+    <name>SA Notification Test</name>
+    <description>SA Notification App (Test)</description>
+
+    <parent>
+        <groupId>org.swarajabhiyan.donation</groupId>
+        <artifactId>sa-notification-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <testng.version>6.9.10</testng.version>
+        <docker.showLogs>true</docker.showLogs>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.swarajabhiyan.donation</groupId>
+            <artifactId>sa-notification-api</artifactId>
+        </dependency>
+
+        <!-- Logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+
+        <!-- Test -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-path</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>3.2.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>2.19.1</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+
+                <configuration>
+                    <images>
+                        <image>
+                            <alias>sa-donation-app</alias>
+                            <name>sa-donation-app:${project.version}</name>
+                            <run>
+                                <ports>
+                                    <port>30080:8080</port>
+                                </ports>
+                                <wait>
+                                    <http>
+                                        <url>http://localhost:30080/health</url>
+                                    </http>
+                                    <time>20000</time>
+                                </wait>
+                                <links>
+                                    <link>mysql:mysql</link>
+                                </links>
+                            </run>
+                        </image>
+                        <image>
+                            <alias>mysql</alias>
+                            <name>mysql:5.7.13</name>
+                            <run>
+                                <env>
+                                    <MYSQL_ROOT_PASSWORD>root-password</MYSQL_ROOT_PASSWORD>
+                                    <MYSQL_USER>mysql</MYSQL_USER>
+                                    <MYSQL_PASSWORD>mysql</MYSQL_PASSWORD>
+                                    <MYSQL_DATABASE>donation</MYSQL_DATABASE>
+                                </env>
+                                <wait>
+                                    <log>mysqld: ready for connections.</log>
+                                    <time>20000</time>
+                                </wait>
+                            </run>
+                        </image>
+                    </images>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

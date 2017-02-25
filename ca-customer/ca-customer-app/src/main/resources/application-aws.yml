@@ -1,0 +1,15 @@
+server:
+  port: 9096
+spring:
+  datasource:
+    url: jdbc:mysql://ss.clqmzs5yevhq.us-west-2.rds.amazonaws.com:3306/sa_donation
+    username: donation_user
+    password: Donation@AndroidApp123
+
+security:
+    resource:
+      id: donation
+      service-id: donation
+      token-info-uri: http://localhost:9000/oauth/check_token
+      user-info-uri:  http://localhost:9000/oauth/me
+
