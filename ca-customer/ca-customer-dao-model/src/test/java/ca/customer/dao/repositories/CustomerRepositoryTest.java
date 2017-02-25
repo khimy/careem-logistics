@@ -57,28 +57,8 @@ public class CustomerRepositoryTest {
     @ExpectedDatabase(table = EntityModel.TBL_ENTITY, value = "notification-save-expect.xml")
     public void testSave() throws JsonProcessingException {
         EntityModel entity = new EntityModel();
-        JsonOption option=new JsonOption();
-        entity.setNotificationStatus(NotificationStatus.PENDING);
-        entity.setNotificationAction(NotificationAction.NO_ACTION);
-        entity.setNotificationType(NotificationType.DONATION);
-        entity.setNotificationMessage("Message");
-        entity.setNotificationTo("1"); //donor id
-        entity.setAttempts(1L);
 
-      /*  option.setEmailId("vivek081141@gmail.com");
-        option.setPhoneNumber("8951152580");
-        option.setDonationAmount(100d);
-        option.setFirstName("Vivek");
-        option.setMiddleName("Kumar");
-        option.setLastName("Agrawal");
-        option.setDonationId(1L);
-        option.setGender(Gender.MALE);
-        option.setNotificationMode(NotificationMode.EMAIL);*/
 
-        entity.setOptions(null);
-        //String a="{\\\"notificationMode\\\":\\\"EMAIL\\\",\\\"donationAmount\\\":100.0,\\\"donationId\\\":1,\\\"emailId\\\":\\\"vivek081141@gmail.com\\\",\\\"phoneNumber\\\":\\\"8951152580\\\",\\\"firstName\\\":\\\"Vivek\\\",\\\"middleName\\\":\\\"Kumar\\\",\\\"lastName\\\":\\\"Agrawal\\\",\\\"gender\\\":\\\"MALE\\\"}";
-        EntityModel result = customerRepository.save(entity);
-        assertThat("Failed to persist object", result, notNullValue());
-        assertThat("Auto generated Id failed", result.getId(), notNullValue());
+
     }
 }

@@ -14,7 +14,7 @@
       <entry name="!?*.clj" />
     </wildcardResourcePatterns>
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="false">
+      <profile default="true" name="Default" enabled="true">
         <processorPath useClasspath="true" />
       </profile>
       <profile default="false" name="Maven default annotation processors profile" enabled="true">
@@ -22,25 +22,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="ca-order-app" />
-        <module name="sa-notification-app" />
-        <module name="sa-notification-test" />
-      </profile>
-      <profile default="false" name="Annotation profile for sa-notification-dao-model" enabled="true">
-        <sourceOutputDir name="target\generated-sources\apt" />
-        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processor name="org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor" />
-        <processorPath useClasspath="true" />
-        <module name="sa-notification-dao-model" />
+        <module name="ca-customer-api" />
+        <module name="ca-customer-app" />
+        <module name="ca-customer-dao-model" />
+        <module name="ca-customer-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ca-order-app" target="1.8" />
-      <module name="sa-notification-app" target="1.8" />
-      <module name="sa-notification-dao-model" target="1.8" />
-      <module name="sa-notification-parent" target="1.8" />
-      <module name="sa-notification-test" target="1.8" />
+      <module name="ca-customer-api" target="1.8" />
+      <module name="ca-customer-app" target="1.8" />
+      <module name="ca-customer-dao-model" target="1.8" />
+      <module name="ca-customer-parent" target="1.8" />
+      <module name="ca-customer-test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

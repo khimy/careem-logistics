@@ -7,9 +7,9 @@ import java.util.List;
  * Created by Vivek on 19-01-2017.
  */
 @Entity
-@Table(name = CustomerModel.TBL_ENTITY)
+@Table(name = CustomerModel.TBL_CUSTOMER)
 public class CustomerModel extends AbstractPersistable {
-    public static final String TBL_ENTITY = "TBL_ENTITY";
+    public static final String TBL_CUSTOMER= "TBL_CUSTOMER";
 
     @Column(name = "FIRST_NAME", nullable = false)
     private String firstName;

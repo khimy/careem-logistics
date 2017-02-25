@@ -9,9 +9,9 @@ public class EntityApi {
 
     public Long id;
 
-    public Name name;
+    public Name name=new Name();
 
-    public Address address;
+    public Address address=new Address();
 
     public String mobile;
 

@@ -33,11 +33,7 @@ public class CustomerService {
 
     @Transactional
     public Customer createCustomer(Customer customer) {
-        CustomerModel customerModel=new CustomerModel();
-        EntityModel entityModel=entityRepository.findOne(customer.entityId);
-        customerModel.setEntityModel(entityModel);
-        customerModel.setStatus(Status.ACTIVE);
-        Customer customerApi =toCustomerModel(customerRepository.save(customerModel));
+        Customer customerApi =toCustomerAPI(customerRepository.save(toCustomerModel(customer)));
         return customerApi;
     }
 
@@ -51,9 +47,18 @@ public class CustomerService {
     public Customer deactivateCustomer(Long customerId) {
         CustomerModel customerModel=customerRepository.findOne(customerId);
         customerModel.setStatus(Status.INACTIVE);
-        Customer customerApi =toCustomerModel(customerRepository.save(customerModel));
+        Customer customerApi =toCustomerAPI(customerRepository.save(customerModel));
         return customerApi;
     }
+
+    @Transactional
+    public EntityApi deactivateEntity(Long entityId) {
+        EntityModel entityModel=entityRepository.findOne(entityId);
+        entityModel.setStatus(Status.INACTIVE);
+        EntityApi entityApi =toEntityAPI(entityRepository.save(entityModel));
+        return entityApi;
+    }
+
 
     public List<Customer> getCustomerList(){
         List<Customer> customers=new ArrayList<Customer>();
@@ -70,9 +75,7 @@ public class CustomerService {
 
     @Transactional
     public EntityApi createEntity(EntityApi entityApi){
-        EntityModel entityModel=new EntityModel();
-        entityModel.setStatus(Status.ACTIVE);
-        EntityApi entityApi1=toEntityModel(entityRepository.save(entityModel));
+        EntityApi entityApi1=toEntityAPI(entityRepository.save(toEntityModel(entityApi)));
         return entityApi1;
     }
 
@@ -95,8 +98,8 @@ public class CustomerService {
         return entityApiList;
     }
 
-    private EntityApi toEntityModel(EntityModel entityModel) {
-        EntityApi entityApi =new EntityApi();
+    private EntityModel toEntityModel(EntityApi entityApi) {
+        EntityModel entityModel=new EntityModel();
         entityModel.setEmail(entityApi.email);
         entityModel.setStatus(toStatusModel(entityApi.status));
         entityModel.setMobile(entityApi.mobile);
@@ -104,7 +107,7 @@ public class CustomerService {
         entityModel.setMiddleName(entityApi.name.middle);
         entityModel.setLastName(entityApi.name.last);
         entityModel.setAddress(toAddressModel(entityApi.address));
-        return entityApi;
+        return entityModel;
     }
 
     private EntityApi toEntityAPI(EntityModel model) {
@@ -131,8 +134,11 @@ public class CustomerService {
         return customer;
     }
 
-    private Customer toCustomerModel(CustomerModel customerModel) {
-        Customer customer =new Customer();
+    private CustomerModel toCustomerModel(Customer customer) {
+        CustomerModel customerModel =new CustomerModel();
+        EntityModel entityModel=entityRepository.findOne(customer.entityId);
+        customerModel.setEntityModel(entityModel);
+        customerModel.setStatus(Status.ACTIVE);
         customerModel.setEmail(customer.email);
         customerModel.setStatus(toStatusModel(customer.status));
         customerModel.setMobile(customer.mobile);
@@ -140,7 +146,7 @@ public class CustomerService {
         customerModel.setMiddleName(customer.name.middle);
         customerModel.setLastName(customer.name.last);
         customerModel.setAddress(toAddressModel(customer.address));
-        return customer;
+        return customerModel;
     }
 
     private AddressModel toAddressModel(Address address) {

@@ -28,7 +28,7 @@ public class CustomerController {
     }
 
     @RequestMapping(path = "customer/{customerId}", method = RequestMethod.GET)
-    public Customer getCustomer(@RequestParam Long customerId) throws IOException {
+    public Customer getCustomer(@PathVariable Long customerId) throws IOException {
         if(customerId==null){
             throw new InvalidCustomer("The notification id is invalid");
         }
@@ -41,7 +41,7 @@ public class CustomerController {
     }
 
     @RequestMapping(path = "deactivate", method = RequestMethod.PUT)
-    public Customer deactivateCustomer(Long customerId) throws IOException {
+    public Customer deactivateCustomer(@RequestParam Long customerId) throws IOException {
         if(customerId==null ){
             throw new InvalidCustomer("The notification id is invalid");
         }

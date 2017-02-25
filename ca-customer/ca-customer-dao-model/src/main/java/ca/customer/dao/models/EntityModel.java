@@ -29,7 +29,7 @@ public class EntityModel extends AbstractPersistable {
     @Embedded
     private AddressModel address;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER, mappedBy = "customer")
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER )
     private List<CustomerModel> customerModelList;
 
 
