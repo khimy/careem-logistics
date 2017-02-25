@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.swarajabhiyan.donation</groupId>
-    <artifactId>sa-notification-parent</artifactId>
+    <groupId>com.careem.order</groupId>
+    <artifactId>ca-order-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>SA notification Parent Module</name>
-    <description>Provides the libraries and plugins for SA notification projects</description>
+    <name>Carrem Order Parent Module</name>
+    <description>Provides the libraries and plugins for Careem Ordering</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -30,18 +30,6 @@
 
     <dependencyManagement>
         <dependencies>
-
-            <dependency>
-                <groupId>org.swarajabhiyan.donation</groupId>
-                <artifactId>sa-notification-api</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.swarajabhiyan.donation</groupId>
-                <artifactId>sa-notification-dao-model</artifactId>
-                <version>${project.version}</version>
-            </dependency>
 
             <!-- Swagger Documentation -->
             <dependency>
@@ -103,9 +91,7 @@
     </profiles>
 
     <modules>
-        <module>sa-notification-api</module>
-        <module>sa-notification-app</module>
-        <module>sa-notification-test</module>
-        <module>sa-notification-dao-model</module>
+        <module>ca-order-app</module>
+        <module>ca-order-test</module>
     </modules>
 </project>
