@@ -35,7 +35,7 @@ public class DeliveryModel extends AbstractPersistable{
     public DeliveryStatus deliveryStatus;
 
     @OneToMany
-    public List<RouteDetails> routeDetails;
+    public List<RoutingModel> routingModel;
 
     @Column(name="COMMENTS")
     public String comments;
@@ -80,13 +80,6 @@ public class DeliveryModel extends AbstractPersistable{
         this.deliveryStatus = deliveryStatus;
     }
 
-    public List<RouteDetails> getRouteDetails() {
-        return routeDetails;
-    }
-
-    public void setRouteDetails(List<RouteDetails> routeDetails) {
-        this.routeDetails = routeDetails;
-    }
 
     public String getComments() {
         return comments;
@@ -94,5 +87,13 @@ public class DeliveryModel extends AbstractPersistable{
 
     public void setComments(String comments) {
         this.comments = comments;
+    }
+
+    public List<RoutingModel> getRoutingModel() {
+        return routingModel;
+    }
+
+    public void setRoutingModel(List<RoutingModel> routingModel) {
+        this.routingModel = routingModel;
     }
 }

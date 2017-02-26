@@ -7,17 +7,17 @@ import java.util.Date;
  */
 public class RouteDetails {
 
-     Long id;
-     RoutingStatus routingStatus;
-     Date startDate;
-     Date estimatedEndDate;
-     boolean isParticipated;
-     long vendorId;
-     double offeredAmount; //amount offered to vendor
-     Long eta; //estimated time for participation
-     public RoutingMode modeOfCommunication;
-     public Name name=new Name(); //Name and mobile are for the person who is responsible for transit in that route
-     public String mobile;
+    public Long id;
+    public RoutingStatus routingStatus;
+    public Date startDate;
+    public Date estimatedEndDate;
+    public boolean isParticipated;
+    public long vendorId;
+    public double offeredAmount; //amount offered to vendor
+    public Long eta; //estimated time for participation
+    public RoutingMode modeOfCommunication;
+    public Name name = new Name(); //Name and mobile are for the person who is responsible for transit in that route
+    public String mobile;
 
 
 }
