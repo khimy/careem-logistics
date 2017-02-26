@@ -15,7 +15,7 @@ import java.util.Date;
 public class RoutingModel extends AbstractPersistable {
     public static final String TBL_ROUTING_DETAIL= "TBL_ROUTING_DETAIL";
 
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     @Column(name="ROUTING_STATUS")
     private RoutingStatus routingStatus;
 
@@ -26,6 +26,9 @@ public class RoutingModel extends AbstractPersistable {
     @Temporal(TemporalType.DATE)
     @Column(name="ESTIMATED_DATE")
     private Date estimatedEndDate;
+
+    @Column(name = "ESTIMATED_DISTANCE")
+    private Long estimatedDistance;
 
     @Temporal(TemporalType.DATE)
     @Column(name="END_DATE")
@@ -53,6 +56,14 @@ public class RoutingModel extends AbstractPersistable {
 
     @Column(name="MOBILE")
     private String mobile;
+
+    public Long getEstimatedDistance() {
+        return estimatedDistance;
+    }
+
+    public void setEstimatedDistance(Long estimatedDistance) {
+        this.estimatedDistance = estimatedDistance;
+    }
 
     public RoutingStatus getRoutingStatus() {
         return routingStatus;

@@ -6,6 +6,7 @@ import com.ca.order.dao.models.AddressModel;
 import com.ca.order.dao.models.OrderModel;
 import com.ca.order.dao.models.Status;
 import com.ca.order.dao.repositories.OrderRepository;
+import com.ca.order.exception.InvalidOrderRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -68,6 +69,9 @@ public class OrderService {
     @Transactional
     public OrderApi approveOrder(Long customerId, OrderApi orderApi) {
         OrderModel orderModel=orderRepository.findOne(orderApi.id);
+        if(orderModel.getStatus().equals(Status.APPROVED)){
+            throw new InvalidOrderRequest(" The Order is already APPROVED.");
+        }
         orderModel.setOfferedPrice(orderApi.offeredPrice);
         orderModel.setQuotedPrice(orderApi.quotedPrice);
         orderModel.setStatus(Status.APPROVED);

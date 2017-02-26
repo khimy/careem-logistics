@@ -11,8 +11,9 @@ public class RouteDetails {
     public RoutingStatus routingStatus;
     public Date startDate;
     public Date estimatedEndDate;
+    public Long estimatedDistance;
     public boolean isParticipated;
-    public long vendorId;
+    public Long vendorId;
     public double offeredAmount; //amount offered to vendor
     public Long eta; //estimated time for participation
     public RoutingMode modeOfCommunication;

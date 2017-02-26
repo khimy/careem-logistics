@@ -1,6 +1,7 @@
 package com.ca.order.services;
 
 import com.ca.order.api.DeliveryDetails;
+import com.ca.order.api.DeliveryStatus;
 import com.ca.order.api.RouteDetails;
 import com.ca.order.api.RoutingStatus;
 import com.ca.order.dao.models.DeliveryModel;
@@ -9,6 +10,7 @@ import com.ca.order.dao.models.RoutingModel;
 import com.ca.order.dao.repositories.DeliveryRepository;
 import com.ca.order.dao.repositories.OrderRepository;
 import com.ca.order.dao.repositories.RoutingRepository;
+import com.ca.order.dao.repositories.VendorRepository;
 import com.ca.order.exception.InvalidOrderRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -26,12 +28,14 @@ public class DeliveryService {
     private DeliveryRepository deliveryRepository;
     private RoutingRepository routingRepository;
     private OrderRepository orderRepository;
+    private VendorRepository vendorRepository;
 
     @Autowired
-    public DeliveryService(DeliveryRepository deliveryRepository,RoutingRepository routingRepository,OrderRepository orderRepository){
+    public DeliveryService(DeliveryRepository deliveryRepository, RoutingRepository routingRepository, OrderRepository orderRepository, VendorRepository vendorRepository){
         this.deliveryRepository=deliveryRepository;
         this.routingRepository=routingRepository;
         this.orderRepository=orderRepository;
+        this.vendorRepository = vendorRepository;
     }
 
     @Transactional
@@ -98,12 +102,38 @@ public class DeliveryService {
     @Transactional
     public RouteDetails updateRoute(Long deliveryId, RouteDetails routeDetails) {
         DeliveryModel deliveryModel=deliveryRepository.findOne(deliveryId);
+
         RoutingModel routingModel=routingRepository.findOne(routeDetails.id);
+
+        if(routingModel.getRoutingStatus().equals(RoutingStatus.CHECKED_OUT)){
+            throw  new InvalidOrderRequest("The Route is already completed.");
+        }
+
         routingModel.setRoutingStatus(routeDetails.routingStatus);
+
+
         if(RoutingStatus.CHECKED_OUT.equals(routeDetails.routingStatus)){
             routingModel.setEndDate(new Date());
+            boolean parentCheckOut=true;
+            List<RoutingModel> children=deliveryModel.getRoutingModel();
+            for(RoutingModel child:children){
+                if(!child.getId().equals(routingModel.getId())){
+                    if(!RoutingStatus.CHECKED_OUT.equals(child.getRoutingStatus())){
+                        parentCheckOut=false;
+                    }
+                }
+            }
+            if(parentCheckOut){
+                deliveryModel.setDeliveryStatus(DeliveryStatus.COMPLETED);
+                deliveryModel.setModifiedDate(new Date());
+                deliveryModel.setModifiedBy("SYSTEM");
+            }
         }
         routingModel.setEstimatedEndDate(routeDetails.estimatedEndDate);
+        routingModel.setOfferedAmount(routeDetails.offeredAmount);
+        routingModel.setParticipated(routeDetails.isParticipated);
+        if(routingModel.isParticipated())
+            routingModel.setVendorModel(vendorRepository.findOne(routeDetails.vendorId));
         return toRouteApi(routingRepository.save(routingModel));
     }
 
@@ -112,7 +142,7 @@ public class DeliveryService {
         routeDetails.id=model.getId();
         routeDetails.routingStatus=model.getRoutingStatus();
         routeDetails.estimatedEndDate=model.getEstimatedEndDate();
-        routeDetails.vendorId=model.getVendorModel().getId();
+        routeDetails.vendorId=model.getVendorModel()!=null?model.getVendorModel().getId():null;
         routeDetails.isParticipated=model.isParticipated();
         routeDetails.mobile=model.getMobile();
         routeDetails.eta=model.getEta();

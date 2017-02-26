@@ -2,6 +2,7 @@ package com.ca.order.controllers;
 
 import com.ca.order.api.OrderApi;
 import com.ca.order.exception.InvalidOrderRequest;
+import com.ca.order.services.LogisticsService;
 import com.ca.order.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -16,10 +17,12 @@ import java.util.List;
 public class OrderController {
 
     private OrderService orderService;
+    private LogisticsService logisticsService;
 
     @Autowired
-    public OrderController(OrderService orderService){
+    public OrderController(OrderService orderService, LogisticsService logisticsService){
         this.orderService = orderService;
+        this.logisticsService = logisticsService;
     }
 
     @RequestMapping(path = "create", method = RequestMethod.POST)
@@ -53,7 +56,9 @@ public class OrderController {
         if(customerId==null ){
             throw new InvalidOrderRequest("The order request is invalid");
         }
-        return orderService.approveOrder(customerId, orderApi);
+        OrderApi orderApi2= orderService.approveOrder(customerId, orderApi);
+        logisticsService.createDelivery(orderApi2);
+        return orderApi2;
     }
 
 }
