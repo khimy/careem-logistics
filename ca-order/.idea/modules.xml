@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ca-order-app/ca-order-app.iml" filepath="$PROJECT_DIR$/ca-order-app/ca-order-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/sa-notification-app/sa-notification-app.iml" filepath="$PROJECT_DIR$/sa-notification-app/sa-notification-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/sa-notification-dao-model/sa-notification-dao-model.iml" filepath="$PROJECT_DIR$/sa-notification-dao-model/sa-notification-dao-model.iml" />
       <module fileurl="file://$PROJECT_DIR$/sa-notification-parent.iml" filepath="$PROJECT_DIR$/sa-notification-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/sa-notification-test/sa-notification-test.iml" filepath="$PROJECT_DIR$/sa-notification-test/sa-notification-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ca-order-test/sa-notification-test.iml" filepath="$PROJECT_DIR$/ca-order-test/sa-notification-test.iml" />
     </modules>
   </component>
 </project>
