@@ -1,24 +1,17 @@
 package com.ca.order.services;
 
-import com.ca.order.api.Address;
 import com.ca.order.api.DeliveryStatus;
 import com.ca.order.api.OrderApi;
-import com.ca.order.dao.models.AddressModel;
 import com.ca.order.dao.models.DeliveryModel;
-import com.ca.order.dao.models.OrderModel;
-import com.ca.order.dao.models.Status;
 import com.ca.order.dao.repositories.DeliveryRepository;
 import com.ca.order.dao.repositories.OrderRepository;
 import com.ca.order.dao.repositories.RoutingRepository;
-import com.ca.order.dao.repositories.VendorRepository;
 import com.ca.order.processor.DeliveryProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Created by Vivek on 19-01-2017.
@@ -48,6 +41,7 @@ public class LogisticsService {
         deliveryModel.setCreatedDate(new Date());
         deliveryModel.setCalculatedDistance(Long.valueOf(DeliveryProcessor.calculateDistance(orderApi)));
         deliveryModel.setRoutingModel(DeliveryProcessor.getRoutingModel(orderApi, deliveryModel));
+        deliveryModel.setTimeOfArrival(new Date());
         routingRepository.save(deliveryModel.getRoutingModel());
         deliveryRepository.save(deliveryModel);
         return orderApi;

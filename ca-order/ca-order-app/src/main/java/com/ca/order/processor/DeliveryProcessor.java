@@ -47,6 +47,7 @@ public class DeliveryProcessor {
         routingModel.setEta(8L);
         routingModel.setModeOfCommunication(mode);
         routingModel.setEstimatedDistance(calculatedDistance);
+        routingModel.setStartDate(new Date());
         return routingModel;
     }
 }

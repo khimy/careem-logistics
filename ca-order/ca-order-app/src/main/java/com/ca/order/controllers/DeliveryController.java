@@ -1,6 +1,8 @@
 package com.ca.order.controllers;
 
 import com.ca.order.api.DeliveryDetails;
+import com.ca.order.api.NotificationApi;
+import com.ca.order.api.OrderApi;
 import com.ca.order.exception.InvalidOrderRequest;
 import com.ca.order.services.DeliveryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,5 +52,15 @@ public class DeliveryController {
         public List<DeliveryDetails> getAllDelivery(@PathVariable Long orderId) throws IOException {
             return deliveryService.getAllDelivery(orderId);
         }
+
+
+    @RequestMapping(path = "notify", method = RequestMethod.GET)
+    public NotificationApi getNotification(@PathVariable Long orderId) throws IOException {
+        if(orderId==null ){
+            throw new InvalidOrderRequest("The order request is invalid");
+        }
+        NotificationApi orderApi2= deliveryService.getNotification(orderId);
+        return orderApi2;
+    }
 
 }

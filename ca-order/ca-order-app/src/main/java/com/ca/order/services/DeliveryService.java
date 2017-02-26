@@ -1,9 +1,6 @@
 package com.ca.order.services;
 
-import com.ca.order.api.DeliveryDetails;
-import com.ca.order.api.DeliveryStatus;
-import com.ca.order.api.RouteDetails;
-import com.ca.order.api.RoutingStatus;
+import com.ca.order.api.*;
 import com.ca.order.dao.models.DeliveryModel;
 import com.ca.order.dao.models.OrderModel;
 import com.ca.order.dao.models.RoutingModel;
@@ -165,5 +162,23 @@ public class DeliveryService {
             rdList.add(toRouteApi(routingModel));
         }
         return rdList;
+    }
+
+    public NotificationApi getNotification(Long orderId) {
+        NotificationApi notificationApi=new NotificationApi();
+        OrderModel orderModel=orderRepository.findOne(orderId);
+        List<DeliveryModel> deliveryModels=deliveryRepository.findByOrderModel(orderModel);
+        DeliveryModel model=null;
+        if(deliveryModels!=null && !deliveryModels.isEmpty()){
+            model=deliveryModels.get(0);
+            notificationApi.startTime=model.getTimeOfArrival();
+            notificationApi.endTime=model.getModifiedDate();
+            notificationApi.currentProcess=model.getDeliveryStatus().toString();
+        }else{
+            notificationApi.startTime=orderModel.getCreatedDate();
+            notificationApi.currentProcess=orderModel.getStatus().toString();
+            notificationApi.endTime=orderModel.getModifiedDate();
+        }
+
     }
 }
